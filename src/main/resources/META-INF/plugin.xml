@@ -1,18 +1,27 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
     <id>com.github.mushan0x0.tinypnggopluginidea</id>
-    <name>tinypng-go-plugin-idea</name>
+    <name>Tinypng Go</name>
     <vendor>mushan0x0</vendor>
-
+    <version>1.0.0</version>
+    <description>IDEA compressed image plug-in, based on tinypng-go, without key, you can compress infinitely by right-clicking.</description>
     <depends>com.intellij.modules.platform</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <applicationService serviceImplementation="com.github.mushan0x0.tinypnggopluginidea.services.MyApplicationService"/>
-        <projectService serviceImplementation="com.github.mushan0x0.tinypnggopluginidea.services.MyProjectService"/>
+<!--        <applicationService-->
+<!--                serviceImplementation="com.github.mushan0x0.tinypnggopluginidea.services.MyApplicationService"/>-->
+<!--        <projectService serviceImplementation="com.github.mushan0x0.tinypnggopluginidea.services.MyProjectService"/>-->
     </extensions>
 
     <applicationListeners>
-        <listener class="com.github.mushan0x0.tinypnggopluginidea.listeners.MyProjectManagerListener"
-                  topic="com.intellij.openapi.project.ProjectManagerListener"/>
+<!--        <listener class="com.github.mushan0x0.tinypnggopluginidea.listeners.MyProjectManagerListener"-->
+<!--                  topic="com.intellij.openapi.project.ProjectManagerListener"/>-->
     </applicationListeners>
+    <actions>
+        <action class="com.github.mushan0x0.tinypnggopluginidea.OptimizeImageSizeAction"
+                icon="/icons/action.png"
+                text="Optimize Image size with TinyPNG Go">
+            <add-to-group group-id="ProjectViewPopupMenu" anchor="after" relative-to-action="ReplaceInPath"/>
+        </action>
+    </actions>
 </idea-plugin>
