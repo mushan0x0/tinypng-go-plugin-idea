@@ -1,8 +1,12 @@
+<!-- Plugin description -->
+
 # tinypng-go-plugin-idea
 
 ![Build](https://github.com/mushan0x0/tinypng-go-plugin-idea/workflows/Build/badge.svg)
 [![Version](https://img.shields.io/jetbrains/plugin/v/PLUGIN_ID.svg)](https://plugins.jetbrains.com/plugin/PLUGIN_ID)
 [![Downloads](https://img.shields.io/jetbrains/plugin/d/PLUGIN_ID.svg)](https://plugins.jetbrains.com/plugin/PLUGIN_ID)
+
+IDEA compressed image plug-in, based on tinypng-go, without key, you can compress infinitely by right-clicking.
 
 ## Installation
 
@@ -16,8 +20,15 @@
   Download the [latest release](https://github.com/mushan0x0/tinypng-go-plugin-idea/releases/latest) and install it manually using
   <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>⚙️</kbd> > <kbd>Install plugin from disk...</kbd>
 
+- Use: 
+
+<img width="320" src="./menu.jpg">
+
+<img width="320" src="./result.jpg">
 
 ---
 Plugin based on the [IntelliJ Platform Plugin Template][template].
 
 [template]: https://github.com/JetBrains/intellij-platform-plugin-template
+
+<!-- Plugin description end -->
