@@ -20,11 +20,11 @@ IDEA compressed image plug-in, based on tinypng-go, without key, you can compres
   Download the [latest release](https://github.com/mushan0x0/tinypng-go-plugin-idea/releases/latest) and install it manually using
   <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>⚙️</kbd> > <kbd>Install plugin from disk...</kbd>
 
-- Use: 
-
-<img width="320" src="./menu.jpg">
+- Use:
 
 <img width="320" src="./result.jpg">
+
+<img width="320" src="./menu.jpg">
 
 ---
 Plugin based on the [IntelliJ Platform Plugin Template][template].

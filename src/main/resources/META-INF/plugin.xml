@@ -3,7 +3,6 @@
     <id>com.github.mushan0x0.tinypnggopluginidea</id>
     <name>Tinypng Go</name>
     <vendor>mushan0x0</vendor>
-    <version>1.0.0</version>
     <description>IDEA compressed image plug-in, based on tinypng-go, without key, you can compress infinitely by right-clicking.</description>
     <depends>com.intellij.modules.platform</depends>
 
