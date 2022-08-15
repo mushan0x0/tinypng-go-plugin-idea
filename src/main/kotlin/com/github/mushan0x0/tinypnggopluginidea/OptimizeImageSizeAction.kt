@@ -13,21 +13,21 @@ import java.io.InputStreamReader
 
 class OptimizeImageSizeAction : AnAction() {
     override fun actionPerformed(e: AnActionEvent) {
-        ProgressManager.getInstance().run(object : Task.Backgroundable(e.project, "Title") {
+        ProgressManager.getInstance().run(object : Task.Backgroundable(e.project, "TinyPNG Go") {
             override fun run(progressIndicator: ProgressIndicator) {
                 progressIndicator.text = "compressing"
                 val virtualFile = e.getData(PlatformDataKeys.VIRTUAL_FILE)
                 val process: Process = Runtime.getRuntime().exec(arrayOf("bash", "-l", "-c", "npx tinypng-go " + virtualFile?.canonicalPath))
-//                ProcessBuilder("npx", "tinypng-go", virtualFile?.canonicalPath).start()
                 val bufferedReader = BufferedReader(InputStreamReader(process.inputStream))
                 process.waitFor();
-                val group = NotificationGroup("", NotificationDisplayType.NONE, true)
+                val group = NotificationGroup("", NotificationDisplayType.BALLOON, true)
                 val notification: Notification = group.createNotification(
                     "Compression complete",
                     bufferedReader.use(BufferedReader::readText),
                     NotificationType.INFORMATION,
                     NotificationListener.URL_OPENING_LISTENER
                 )
+                virtualFile?.refresh(false,true);
                 Notifications.Bus.notify(notification)
                 progressIndicator.fraction = 1.0
             }
